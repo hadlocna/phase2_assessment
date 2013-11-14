@@ -1,0 +1,13 @@
+<div class="container">
+    <% event = Event.find(params[:event_id]) %>
+  <h1>Edit <%=event.name%> Event Page!</h1>
+  <% event = Event.find(params[:event_id])%>
+  <form action="/edit/<%=params[:event_id]%>" method="POST" class='display-inline'>
+  <input type="text" name="name" placeholder="<%=event.name%>"<br>
+  <input type="text" name="location" placeholder="<%=event.location%>"><br>
+  Start Time: <input type="date" name="starts_at" placeholder="<%=event.starts_at%>"><br>
+  End Time:  <input type="date" name="ends_at" placeholder="<%=event.ends_at%>"><br>
+  <input type="submit" value="Update Event" class='cool-button'>
+  </form>
+
+</div>

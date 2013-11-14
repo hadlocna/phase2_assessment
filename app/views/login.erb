@@ -1,0 +1,19 @@
+<div class="container">
+
+<!-- <h2>Log in</h2> -->
+
+<% if session[:login_error] %>
+  <p class="error"> <%= session[:login_error] %> </p>
+<% end %>
+
+<form action="/login" method="POST" class='display-inline'>
+  <input type="text" name="email" placeholder="Email"><br>
+  <input type="password" name="password" placeholder="Password"><br>
+  <input type="submit" value="Log in" class='cool-button'>
+</form>
+
+<% if session[:login_error] %>
+  <a href='/signup'><button class='cool-button'>Sign up</button></a>
+<% end %>
+
+</div>
